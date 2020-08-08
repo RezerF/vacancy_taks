@@ -1,11 +1,11 @@
 from selenium.webdriver.common.by import By
-from .base_page import BasePage
 
 
 class BasePageLocators():
     BUTTON_ADD_TODO = (By.CSS_SELECTOR, '#add_new_todo')
     TODO_LISTS = (By.CSS_SELECTOR, '[class="col-lg-4 col-md-6 col-sm-6 col-xs-12"]:')
-    CHECK_BOX_BUY_MILK = (By.CSS_SELECTOR, '#7264')
+    CHECK_BOX_BUY_MILK = (By.CSS_SELECTOR, 'label[id="7264"]')
+    PARENT_BUY_MILK = (By.XPATH, '//label[@id="7264"]/parent::*')
 
 
 class NewTaskLocators():
