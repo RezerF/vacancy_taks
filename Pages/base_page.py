@@ -36,9 +36,9 @@ class BasePage():
 
     def should_be_task_mark_as_open(self):
         task_milk = self.browser.find_element(*BasePageLocators.PARENT_BUY_MILK)
-        task_milk_closed = 'style="text-decoration: none;"'
+        task_milk_open = 'style="text-decoration: none;"'
         html_list = task_milk.get_attribute("innerHTML")
-        assert (task_milk_closed in html_list), 'Task not to be closed'
+        assert (task_milk_open in html_list), 'Task is closed'
 
     def should_be_hidden_button(self):
         submit = self.browser.find_element(*NewTaskLocators.SUBMIT_BUTTON)

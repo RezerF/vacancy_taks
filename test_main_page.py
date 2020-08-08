@@ -14,7 +14,6 @@ def test_create_uniq_task_to_existing_category(browser, category):
     page.open()
     page.create_uniq_task_to_present_category()
     page.should_be_task_in_category()
-    #time.sleep(5)
 
 #@pytest.mark.skip
 def test_create_uniq_task_to_new_category(browser):
@@ -44,6 +43,7 @@ def test_create_task_with_empty_task_and_category(browser):
     page.create_empty_task_and_category()
     page.should_be_hidden_button()
 
+#@pytest.mark.skip
 def test_create_empty_task_to_new_category(browser):
     page = MainPage(browser, link)
     page.open()
